@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html class="no-js consumer" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+  <title>
+    Chrome Browser
+  </title>
+  </script>
+  <style>
+    #info {
+      font-size: 20px;
+    }
+
+    #div_start {
+      float: right;
+    }
+
+    #headline {
+      text-decoration: none
+    }
+
+    #results {
+      font-size: 14px;
+      font-weight: bold;
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: left;
+      min-height: 150px;
+    }
+
+    #start_button {
+      border: 0;
+      background-color: transparent;
+      padding: 0;
+    }
+
+    .interim {
+      color: gray;
+    }
+
+    .final {
+      color: black;
+      padding-right: 3px;
+    }
+
+    .button {
+      display: none;
+    }
+
+    .marquee {
+      margin: 20px auto;
+    }
+
+    #buttons {
+      margin: 10px 0;
+      position: relative;
+      top: -50px;
+    }
+
+    #copy {
+      margin-top: 20px;
+    }
+
+    #copy>div {
+      display: none;
+      margin: 0 70px;
+    }
+  </style>
+  <style>
+    a.c1 {
+      font-weight: normal;
+    }
+  </style>
+</head>
+
+<body class="" id="grid">
+  <div class="browser-landing" id="main">
+    <div class="compact marquee-stacked" id="marquee">
+      <div class="marquee-copy">
+      </div>
+    </div>
+    <div class="compact marquee">
+      <div id="info">
+        <p id="info_speak_now" style="display:none">
+          Speak now.
+        </p>
+      </div>
+      <div id="div_start">
+        <button id="start_button" onclick="startButton(event)"><img alt="Start" id="start_img" src="/intl/en/chrome/assets/common/images/content/mic.gif"></button>
+      </div>
+      <div id="results">
+        <span class="final" id="final_span"></span> <span class="interim" id="interim_span"></span>
+      </div>
+      <div class="compact marquee" id="div_language">
+        <select id="select_language" onchange="updateCountry()">
+            </select>&#xA0;&#xA0; <select id="select_dialect">
+            </select>
+      </div>
+    </div>
+  </div>
+
+  <script src="/scripte/letztes.js"></script>
+
+
+</body>
+
+</html>
