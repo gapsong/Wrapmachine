@@ -1,5 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import {Button} from 'react-bootstrap';
 import Messages from './Messages';
 import Dictphone from './Dictphone';
 import {getRhymes} from '../actions/rhyme';
@@ -30,9 +31,9 @@ class Home extends React.Component {
         <div className="panel">
           <div className="panel-body">
             <Dictphone onRelease={this.onRelease.bind(this)}/>
-            {/* <button bsStyle={"success"} onClick={this.onClick.bind(this)}>
+            {/* <Button bsStyle={"success"} onClick={this.onClick.bind(this)}>
               Attacke
-            </button> */}
+            </Button> */}
             <br/>
             <panel>{this.props.rhymes}</panel>
           </div>

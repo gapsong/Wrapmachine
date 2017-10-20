@@ -1,5 +1,6 @@
 import React from 'react';
 import {getRhymes} from '../actions/rhyme';
+import {Button} from 'react-bootstrap';
 
 class Dictphone extends React.Component {
   constructor() {
@@ -79,9 +80,9 @@ class Dictphone extends React.Component {
 class RecordButton extends React.Component {
   render() {
     return (
-      <button bsStyle={"success"} onClick={this.props.handleClick}>
+      <Button bsStyle={"success"} onClick={this.props.handleClick}>
         Gib mir einen Reim
-      </button>
+      </Button>
     )
   }
 }
