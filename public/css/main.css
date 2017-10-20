@@ -5973,3 +5973,6 @@ textarea {
   border-radius: 2px;
   letter-spacing: 0.2em;
   text-transform: uppercase; }
+
+.ryhmeView .badge {
+  font-size: 30px; }

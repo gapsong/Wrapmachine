@@ -4,6 +4,7 @@ import {Button} from 'react-bootstrap';
 import Messages from './Messages';
 import Dictphone from './Dictphone';
 import {getRhymes} from '../actions/rhyme';
+import RhymeView from './RhymeView';
 
 class Home extends React.Component {
   constructor(props) {
@@ -35,7 +36,7 @@ class Home extends React.Component {
               Attacke
             </Button> */}
             <br/>
-            <panel>{this.props.rhymes}</panel>
+            <RhymeView rhymes={this.props.rhymes}/>
           </div>
         </div>
       </div>
