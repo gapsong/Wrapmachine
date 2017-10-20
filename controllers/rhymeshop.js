@@ -55,7 +55,7 @@ exports.getReimbuchRhymes = function(req, res) {
     //cleans out the html
     cleaner.clean(temp, options, function(html) {
       console.log("rhymes:", code2ascii(html));
-      return res.json({rhymes: code2ascii(html)});
+      return res.json({rhymes: code2ascii(html).split(" ")});
     });
   });
 }
