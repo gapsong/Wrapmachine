@@ -6,7 +6,7 @@ class RhymeView extends React.Component {
         return (
             <div className="rhymeView">
                 {this.props.rhymes.map((item) => (
-                    <button>{item}</button>
+                    <p>{item}</p>
                 ))}
             </div>
         );
