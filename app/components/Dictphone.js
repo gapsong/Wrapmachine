@@ -1,5 +1,4 @@
 import React from 'react';
-import {getRhymes} from '../actions/rhyme';
 import {Button} from 'react-bootstrap';
 
 class Dictphone extends React.Component {
