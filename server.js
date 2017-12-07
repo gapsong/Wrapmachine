@@ -55,7 +55,7 @@ if (app.get('env') === 'development') {
   app.use(require('webpack-hot-middleware')(compiler));
 }
 
-app.get('/contact', contactController.contactGet);
+// app.get('/contact', contactController.contactGet);
 app.post('/rhymes', rhymesController.getReimbuchRhymes);
 
 // React server rendering

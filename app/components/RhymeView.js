@@ -10,7 +10,7 @@ class RhymeView extends React.Component {
     return (
       <div className="rhymeView">
         {this.props.rhymes.map((item) => (
-          <button onClick= {() => { this.onClick(item); }}>{item}</button>
+          <button className="words-panel" onClick= {() => { this.onClick(item); }}>{item}</button>
         ))}
       </div>
     );

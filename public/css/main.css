@@ -5818,6 +5818,12 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.words-panel {
+  padding: 5px;
+  border-radius: 15px;
+  background: #F0F8FF;
+  margin: 5px; }
+
 html {
   position: relative;
   min-height: 100%; }

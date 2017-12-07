@@ -5,7 +5,7 @@ class Dictphone extends React.Component {
   constructor() {
     super(); //pass in the 'props' arg to access this.props
     this.state = {
-      resultText: 'Text received: ---'
+      resultText: 'noch nichts'
     };
   }
 
@@ -43,7 +43,7 @@ class Dictphone extends React.Component {
       newColour = event.results[last][0].transcript;
       var n = newColour.split(" ");
       n = n[n.length - 1];
-      resultText = 'Reim auf: ' + n;
+      resultText = n; //rhyme
       self.updateState(resultText);
       self.onRelease(n);
     }
@@ -69,8 +69,8 @@ class Dictphone extends React.Component {
               <p><RecordButton handleClick={this.handleClick.bind(this)}/></p>
             </div>
           </div>
+          <Result resultText={this.state.resultText}/>
         </div>
-        <Result resultText={this.state.resultText}/>
       </div>
     )
   }
@@ -80,7 +80,7 @@ class RecordButton extends React.Component {
   render() {
     return (
       <Button bsStyle={"success"} onClick={this.props.handleClick}>
-        Gib mir einen Reim
+        Gib mir einen Reim auf...
       </Button>
     )
   }
