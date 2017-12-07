@@ -53,7 +53,7 @@ exports.getReimbuchRhymes = function(req, res) {
     temp = $.html();
 
     //cleans out the html
-    cleaner.clean(temp, options, function(html) {
+    return cleaner.clean(temp, options, function(html) {
       console.log("rhymes:", code2ascii(html));
       //delete empty strings
       temp = code2ascii(html).split(" ");

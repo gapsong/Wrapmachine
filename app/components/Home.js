@@ -4,7 +4,6 @@ import {Button} from 'react-bootstrap';
 import Messages from './Messages';
 import Dictphone from './Dictphone';
 import {getRhymes} from '../actions/rhyme';
-import {submitContactForm} from '../actions/contact';
 import RhymeView from './RhymeView';
 
 class Home extends React.Component {
@@ -33,9 +32,9 @@ class Home extends React.Component {
         <div className="panel">
           <div className="panel-body">
             <Dictphone onRelease={this.onRelease.bind(this)}/>
-            <Button bsStyle={"success"} onClick={this.onClick.bind(this)}>
+            {/* <Button bsStyle={"success"} onClick={this.onClick.bind(this)}>
               Attacke
-            </Button>
+            </Button> */}
             <br/>
             <RhymeView rhymes={this.props.rhymes}/>
           </div>
