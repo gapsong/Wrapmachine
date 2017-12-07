@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Button} from 'react-bootstrap';
+import {Button, Panel} from 'react-bootstrap';
 import Messages from './Messages';
 import Dictphone from './Dictphone';
 import {getRhymes} from '../actions/rhyme';
@@ -9,17 +9,15 @@ import RhymeView from './RhymeView';
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      lastword: 'auto'
-    };
   }
 
   componentDidMount() {
-    this.setState({lastword: 'auto'});
+    this.props.dispatch({type: 'SHUFFLE'});
   }
 
-  onClick() {
-    this.props.dispatch(getRhymes(this.state.lastword));
+  getRhymes(rhymes){
+    this.props.dispatch(getRhymes(rhymes));
+    this.props.dispatch({type: 'SHUFFLE'});
   }
 
   onRelease(param) {
@@ -32,11 +30,9 @@ class Home extends React.Component {
         <div className="panel">
           <div className="panel-body">
             <Dictphone onRelease={this.onRelease.bind(this)}/>
-            {/* <Button bsStyle={"success"} onClick={this.onClick.bind(this)}>
-              Attacke
-            </Button> */}
             <br/>
-            <RhymeView rhymes={this.props.rhymes}/>
+            <Panel><RhymeView onClick = {this.getRhymes.bind(this)} rhymes={this.props.rhymes}/></Panel>
+            <Panel><RhymeView onClick = {this.getRhymes.bind(this)} rhymes={this.props.randomWords}/></Panel>
           </div>
         </div>
       </div>
@@ -45,7 +41,7 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return {rhymes: state.temp.rhymes};
+  return {rhymes: state.temp.rhymes, randomWords: state.randomWords};
 };
 
 export default connect(mapStateToProps)(Home);
