@@ -1,16 +1,11 @@
-export function submitContactForm(name, email, message) {
+export function submitContactForm() {
   return (dispatch) => {
     dispatch({
       type: 'CLEAR_MESSAGES'
     });
     return fetch('/contact', {
-      method: 'post',
+      method: 'get',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        message: message
-      })
     }).then((response) => {
       if (response.ok) {
         return response.json().then((json) => {
