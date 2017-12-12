@@ -6,10 +6,10 @@ function shuffle(a) {
   return a;
 }
 
-export default function randomWords(state = {}, action) {
+export default function randomWords(state = [], action) {
   switch (action.type) {
       case 'SHUFFLE':
-      return Object.assign([], shuffle(state));
+      return [...shuffle(state)];
     default:
       return state;
   }
