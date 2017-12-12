@@ -27,6 +27,7 @@ class Contact extends React.Component {
           </div>
           <div className="panel-body">
             <Messages messages={this.props.messages}/>
+            {this.props.messages}
             <form onSubmit={this.handleSubmit.bind(this)} className="form-horizontal">
               <div className="form-group">
                 <label htmlFor="name" className="col-sm-2">Name</label>
