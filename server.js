@@ -55,13 +55,14 @@ if (app.get('env') === 'development') {
   app.use(require('webpack-hot-middleware')(compiler));
 }
 
-// app.get('/contact', contactController.contactGet);
+app.post('/contact', contactController.contactPost);
 app.post('/rhymes', rhymesController.getReimbuchRhymes);
 
 // React server rendering
 app.use(function(req, res) {
   var initialState = {
     temp: [],
+    messages: {},
     randomWords: [
       "abendessen",
       "abenteuer",

@@ -18,5 +18,6 @@ exports.contactGet = function(req, res) {
  * POST /contact
  */
 exports.contactPost = function(req, res) {
+  console.log("request");
   res.send({msg: 'Thank you! Your feedback has been submitted.'});
 };

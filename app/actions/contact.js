@@ -4,8 +4,11 @@ export function submitContactForm() {
       type: 'CLEAR_MESSAGES'
     });
     return fetch('/contact', {
-      method: 'get',
+      method: 'post',
       headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: "g"
+      })
     }).then((response) => {
       if (response.ok) {
         return response.json().then((json) => {
