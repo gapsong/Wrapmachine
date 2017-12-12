@@ -1,8 +1,8 @@
 export default function temp(state = {}, action) {
-  state = {rhymes: []};
   switch (action.type) {
     case 'GET_RHYME_SUCCESSFUL':
-      return Object.assign({}, action.word);
+    console.log("word",action.word);
+      return Object.assign([], action.word);
     default:
       return state;
   }

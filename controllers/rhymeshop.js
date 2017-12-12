@@ -58,7 +58,7 @@ exports.getReimbuchRhymes = function(req, res) {
       temp = temp.filter((item) =>{
         return item !="";
       });
-      return res.json({rhymes: temp});
+      return res.json(temp);
     });
   });
 }

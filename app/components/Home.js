@@ -41,7 +41,7 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return {rhymes: state.temp.rhymes, randomWords: state.randomWords};
+  return {rhymes: state.temp, randomWords: state.randomWords};
 };
 
 export default connect(mapStateToProps)(Home);

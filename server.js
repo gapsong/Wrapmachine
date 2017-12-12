@@ -61,7 +61,7 @@ app.post('/rhymes', rhymesController.getReimbuchRhymes);
 // React server rendering
 app.use(function(req, res) {
   var initialState = {
-    temp: {},
+    temp: [],
     randomWords: [
       "abendessen",
       "abenteuer",
