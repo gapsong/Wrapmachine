@@ -12,8 +12,8 @@ export function getRhymes(word) {
       body: JSON.stringify({word: word})
     }).then((response) => {
       if(response.ok){
-        return response.json().then(function(json) {
-          return dispatch({type: 'GET_RHYME_SUCCESSFUL', word: json});//Action wird getriggert
+        return response.json().then((json) => {
+          dispatch({type: 'GET_RHYME_SUCCESSFUL', word: json});//Action wird getriggert
         });
       }else{
          return response.json().then((json) => {
