@@ -7,6 +7,12 @@
   margin:5px;
 }
 
+.header-font{
+  $color: white;
+  color:orange;
+  text-shadow: -1px 0 $color, 0 1px $color, 1px 0 $color, 0 -1px $color;
+}
+
 .background-ocean{
   background-image: url("https://s3.amazonaws.com/spoonflower/public/design_thumbnails/0509/2553/rr12in_Ocean_Blue_SF_shop_preview.png");
 }

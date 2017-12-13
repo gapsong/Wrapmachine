@@ -65,7 +65,7 @@ class Dictphone extends React.Component {
         <div className="content_box">
           <div className="info_box">
             <div>
-              <h1>Freestyle</h1>
+              <h1 className ="header-font">Wrapmachine</h1>
               <p><RecordButton handleClick={this.handleClick.bind(this)}/></p>
             </div>
           </div>
@@ -81,7 +81,7 @@ class RecordButton extends React.Component {
     return (
       // <Image src="https://image.freepik.com/free-vector/wood-texture_1083-21.jpg" rounded onClick={this.props.handleClick} height={50} width={200}/>
 
-      <Button className={"background-wood"} onClick={this.props.handleClick}>
+      <Button bsStyle= "warning" onClick={this.props.handleClick}>
         Gib mir einen Reim auf...
       </Button>
     )

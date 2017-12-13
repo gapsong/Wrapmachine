@@ -2281,7 +2281,7 @@ app.use(function(req, res) {
       "skyline",
       "slave",
       "smart",
-      "so tun als ob",
+      "ob",
       "sogar",
       "solide",
       "sommersprossig",
