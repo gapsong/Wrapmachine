@@ -6,7 +6,7 @@ $link-hover-decoration: none;
 $brand-success: #29b35b;
 $brand-danger: #b61b17;
 
-$font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base: "Permanent Marker", "Helvetica Neue", Helvetica, Arial, bold;
 $headings-font-weight: 600;
 
 $alert-info-border: #31708f;
@@ -30,6 +30,7 @@ $panel-heading-padding: 20px 30px;
 $panel-body-padding: 30px;
 
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,300,600,700,800");
+@import url("//fonts.googleapis.com/css?family=Courgette|Permanent+Marker|Oswald:800|Coda|Titan+One");
 @import "vendor/bootstrap";
 @import "base";
 

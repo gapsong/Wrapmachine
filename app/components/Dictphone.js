@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import {Button, Image} from 'react-bootstrap';
 
 class Dictphone extends React.Component {
   constructor() {
@@ -79,7 +79,9 @@ class Dictphone extends React.Component {
 class RecordButton extends React.Component {
   render() {
     return (
-      <Button bsStyle={"success"} onClick={this.props.handleClick}>
+      // <Image src="https://image.freepik.com/free-vector/wood-texture_1083-21.jpg" rounded onClick={this.props.handleClick} height={50} width={200}/>
+
+      <Button className={"background-wood"} onClick={this.props.handleClick}>
         Gib mir einen Reim auf...
       </Button>
     )

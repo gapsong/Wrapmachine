@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,300,600,700,800");
+@import url("//fonts.googleapis.com/css?family=Courgette|Permanent+Marker|Oswald:800|Coda|Titan+One");
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -1056,7 +1057,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Permanent Marker", "Helvetica Neue", Helvetica, Arial, bold;
   font-size: 14px;
   line-height: 1.57143;
   color: #333333;
@@ -5188,7 +5189,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Permanent Marker", "Helvetica Neue", Helvetica, Arial, bold;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5301,7 +5302,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Permanent Marker", "Helvetica Neue", Helvetica, Arial, bold;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5820,9 +5821,16 @@ button.close {
 
 .words-panel {
   padding: 5px;
-  border-radius: 15px;
-  background: #F0F8FF;
+  border-radius: 3px;
+  border: 1px;
+  background: #92ddda;
   margin: 5px; }
+
+.background-ocean {
+  background-image: url("https://s3.amazonaws.com/spoonflower/public/design_thumbnails/0509/2553/rr12in_Ocean_Blue_SF_shop_preview.png"); }
+
+.background-wood {
+  background-image: url("https://image.freepik.com/free-vector/wood-texture_1083-21.jpg"); }
 
 html {
   position: relative;

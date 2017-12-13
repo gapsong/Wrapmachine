@@ -26,8 +26,8 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <div className="panel">
+      // <div className="container-fluid">
+        <div className="panel background-ocean">
           <div className="panel-body">
             <Dictphone onRelease={this.onRelease.bind(this)}/>
             <br/>
@@ -35,7 +35,7 @@ class Home extends React.Component {
             <Panel><RhymeView onClick = {this.getRhymes.bind(this)} rhymes={this.props.randomWords}/></Panel>
           </div>
         </div>
-      </div>
+      // </div>
     );
   }
 }

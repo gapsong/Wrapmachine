@@ -1,6 +1,16 @@
 .words-panel{
   padding: 5px;
-  border-radius: 15px;
-  background: #F0F8FF;
+  border-radius: 3px;
+  border: 1px;
+  background: #92ddda;
+  // background: #CECECE;
   margin:5px;
+}
+
+.background-ocean{
+  background-image: url("https://s3.amazonaws.com/spoonflower/public/design_thumbnails/0509/2553/rr12in_Ocean_Blue_SF_shop_preview.png");
+}
+
+.background-wood{
+  background-image: url("https://image.freepik.com/free-vector/wood-texture_1083-21.jpg");
 }
