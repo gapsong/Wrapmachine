@@ -65,7 +65,7 @@ class Dictphone extends React.Component {
         <div className="content_box">
           <div className="info_box">
             <div>
-              <h1 className ="header-font">Wrapmachine</h1>
+              <h1 className ="header-font orange">Wrapmachine</h1>
               <p><RecordButton handleClick={this.handleClick.bind(this)}/></p>
             </div>
           </div>

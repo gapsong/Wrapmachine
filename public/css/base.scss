@@ -8,9 +8,11 @@
 }
 
 .header-font{
-  $color: white;
-  color:orange;
-  text-shadow: -1px 0 $color, 0 1px $color, 1px 0 $color, 0 -1px $color;
+  &.orange{
+    color:orange;
+  }
+  $color: #eea236;
+  text-shadow: -1px 0 #0d2d0e, 0 1px $color, 1px 0 $color, 0 -1px $color;
 }
 
 .background-ocean{
