@@ -1,47 +1,42 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import {Button, Panel} from 'react-bootstrap';
-import Messages from './Messages';
-import Dictphone from './Dictphone';
-import {getRhymes} from '../actions/rhyme';
-import RhymeView from './RhymeView';
+import React from 'react'
+import {connect} from 'react-redux'
+import {Panel} from 'react-bootstrap'
+import Dictphone from './Dictphone'
+import {getRhymes} from '../actions/rhyme'
+import RhymeView from './RhymeView'
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
+  componentDidMount () {
+    this.props.dispatch({type: 'SHUFFLE'})
   }
 
-  componentDidMount() {
-    this.props.dispatch({type: 'SHUFFLE'});
+  getRhymes (rhymes) {
+    this.props.dispatch(getRhymes(rhymes))
+    this.props.dispatch({type: 'SHUFFLE'})
   }
 
-  getRhymes(rhymes){
-    this.props.dispatch(getRhymes(rhymes));
-    this.props.dispatch({type: 'SHUFFLE'});
+  onRelease (param) {
+    this.props.dispatch(getRhymes(param))
   }
 
-  onRelease(param) {
-    this.props.dispatch(getRhymes(param));
-  }
-
-  render() {
+  render () {
     return (
-      // <div className="container-fluid">
-        <div className="panel background-ocean">
-          <div className="panel-body">
-            <Dictphone onRelease={this.onRelease.bind(this)}/>
-            <br/>
-            <Panel><RhymeView onClick = {this.getRhymes.bind(this)} rhymes={this.props.rhymes}/></Panel>
-            <Panel><RhymeView onClick = {this.getRhymes.bind(this)} rhymes={this.props.randomWords}/></Panel>
-          </div>
+      // <div className='container-fluid'>
+      <div className='panel background-ocean'>
+        <div className='panel-body'>
+          <Dictphone onRelease={this.onRelease.bind(this)} />
+          <br />
+          <Panel><RhymeView onClick={this.getRhymes.bind(this)} rhymes={this.props.rhymes} /></Panel>
+          <Panel><RhymeView onClick={this.getRhymes.bind(this)} rhymes={this.props.randomWords} /></Panel>
         </div>
+      </div>
       // </div>
-    );
+    )
   }
 }
 
 const mapStateToProps = (state) => {
-  return {rhymes: state.temp, randomWords: state.randomWords};
-};
+  return {rhymes: state.temp, randomWords: state.randomWords}
+}
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(Home)

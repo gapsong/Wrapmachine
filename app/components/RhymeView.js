@@ -1,20 +1,19 @@
-import React from 'react';
+import React from 'react'
 
 class RhymeView extends React.Component {
-
-  onClick(word) {
-    this.props.onClick(word);
+  onClick (word) {
+    this.props.onClick(word)
   }
 
-  render() {
+  render () {
     return (
-      <div className="rhymeView">
+      <div className='rhymeView'>
         {this.props.rhymes.map((item) => (
-          <button className="words-panel" onClick= {() => { this.onClick(item); }}>{item}</button>
+          <button className='words-panel' onClick={() => { this.onClick(item) }}>{item}</button>
         ))}
       </div>
-    );
+    )
   }
 }
 
-export default RhymeView;
+export default RhymeView

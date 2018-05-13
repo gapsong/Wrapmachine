@@ -1,8 +1,8 @@
-export function getRhymes(word) {
+export function getRhymes (word) {
   return (dispatch) => {
     dispatch({
       type: 'CLEAR_MESSAGES'
-    });
+    })
     return fetch('/rhymes', {
       method: 'post',
       headers: {
@@ -11,18 +11,18 @@ export function getRhymes(word) {
       },
       body: JSON.stringify({word: word})
     }).then((response) => {
-      if(response.ok){
+      if (response.ok) {
         return response.json().then((json) => {
-          dispatch({type: 'GET_RHYME_SUCCESSFUL', word: json});//Action wird getriggert
-        });
-      }else{
-         return response.json().then((json) => {
+          dispatch({type: 'GET_RHYME_SUCCESSFUL', word: json})
+        })
+      } else {
+        return response.json().then((json) => {
           dispatch({
             type: 'GET_RHYME_FAILURE',
             messages: Array.isArray(json) ? json : [json]
-          });
-        });
+          })
+        })
       }
-    });
+    })
   }
 }
