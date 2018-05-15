@@ -1,6 +1,6 @@
 var express = require('express')
 var path = require('path')
-var logger = require('morgan')
+// var logger = require('morgan')
 var compression = require('compression')
 var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser')
@@ -40,7 +40,7 @@ app.use(sass({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public')
 }))
-app.use(logger('dev'))
+// app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(expressValidator())
